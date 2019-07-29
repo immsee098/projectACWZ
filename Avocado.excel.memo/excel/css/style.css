@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html, body		{ position: relative; height: 100%; margin: 0; padding: 0; font-family: 'Nanum Gothic'; font-size: 14px; background: url('../img/bak_excel_bottom_pattern.png') repeat-x 100% 100%; }
+
+html			{ background: url('../img/bak_excel_top_pattern.png') repeat-x 0 0; min-width: 765px; }
+body:before		{ content: ""; display: block; position: absolute; left: 0; bottom: 0; height: 38px; width: 761px; background: url('../img/bak_excel_bottom_index.png') no-repeat 0 0; }
+body:after		{ content: ""; display: block; position: absolute; right: 0; bottom: 0; height: 38px; width: 287px; background: url('../img/bak_excel_bottom_right.png') no-repeat 0 0; }
+.sound_only		{ display: none !important; }
+
+#head			{ position: absolute; top: 0; left: 0; right: 0; padding-left: 47px; height: 149px; background: url('../img/bak_excel_top.png') no-repeat 0 0; }
+#head:after	{ content: ""; display: block; position: absolute; right: 0; bottom: 0; height: 149px; width: 91px; background: url('../img/bak_excel_top_right.png') no-repeat 0 0; }
+
+#foot			{ position: absolute; bottom: 0; left: 0; padding-left: 62px; width: 301px; height: 38px; background: url('../img/bak_excel_bottom_index.png') no-repeat 0 0; }
+#foot.login		{ background-image: url('../img/bak_excel_bottom_login.png'); }
+#foot.write		{ background-image: url('../img/bak_excel_bottom_write.png'); }
+#foot a			{ display: block; position: relative; float: left; width: 73px; height: 24px; overflow: hidden; text-indent: -999px; }
+#foot a.index	{ width: 84px; }
+#foot a.write	{ width: 74px; }
+#foot a.login	{ width: 74px; }
+
+
+
+#body		{ display: block; position: absolute; top: 149px; bottom: 38px; left: 0; right: 0; overflow-y: auto; }
+#body table		{ width: 100%; padding:0; border-spacing: 0px !important; border:0; border-collapse:collapse; }
+#body table th,
+#body table td		{ padding: 0px; }
+#body table thead th	{ box-sizing: border-box; border: 1px solid #9eb6ce; border-top: 1px solid #688caf; height: 21px; background: url('../img/bak_excel_thead.png') repeat-x; font-size: 13px; font-weight: normal; vertical-align: middle; }
+#body table thead th:first-child	{ background: url('../img/bak_excel_top_left.png') no-repeat; }
+#body table tbody th		{ height: 25px; font-size: 13px; font-weight: normal; background: #e4ecf7; border: 1px solid #9eb6ce;}
+#body table tbody td		{ position: relative; border: 1px solid #d0d7e5; font-size: 13px; padding: 4px; }
+#body table tbody td a		{ color: #000; text-decoration: none; }
+#body table tbody td a:hover	{ text-decoration: underline; }
+#body table tbody td a.read	{ font-weight: bold; }
+#body table textarea	{ border: none; width: 98%; height: 150px; outline: none; }
+
+#body table tbody td.on:before		{ 
+	content: "";
+	display: block;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	border: 3px solid #000;
+	opacity: .8;
+	z-index: 0;
+}
+#body table tbody td.on:after	{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	right: -4px;
+	bottom: -4px;
+	border: 1px solid #fff;
+	background: rgba(0, 0, 0, .8);
+	z-index: 1;
+}
+#body table tbody td *	{ position: relative; z-index: 5; }
+
+#body table input[type="text"],
+#body table input[type="password"]	{ border: none; background: none; outline: none; }
+#body table button	{ border: none; background: none; cursor: pointer; }
+
+#body table tbody td li	{ padding-left: 0; }
+
+#member_list .ui-thumb	{ display: none; }
+#member_list ul,
+#member_list li			{ margin: 0; padding: 0; list-style: none; }
+#member_list li			{ position: relative; padding-left: 40px; margin: 5px 0; }
+#member_list li input[type="radio"]	{ position: absolute; left: 0; top: 50%; margin-top: -10px; }
+#member_list p			{ margin: 0; } 
+
+/* scrollbar : ie except */
+#body::-webkit-scrollbar-track			{ -webkit-box-shadow: none; background: url('../img/bak_excel_scroll.png') repeat-y; border-left: 1px solid #b2d0f6;}
+#body::-webkit-scrollbar				{ width: 16px; height: 16px; background: #7999c2; }
+#body::-webkit-scrollbar-thumb			{ background: url('../img/bak_excel_scrollbar.png'); border: 1px solid #596991;  }
+
